@@ -40,3 +40,4 @@ out/
 !**/src/main/**
 !**/src/test/**
 !/artifacts/app-ibank.jar
+!/artifacts/app-ibank-build-for-testers.jar
