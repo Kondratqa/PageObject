@@ -44,10 +44,11 @@ public class MoneyTransferTest {
     }
 
     @Test
-    void invalidTransferBetweenCards() {
+    void invalidTransferBetweenCards() throws InterruptedException {
         var amount = DataHelper.generateInvalidAmount(BalanceSecondCard);
         var transferPage = dashboardPage.selectCardToTransfer(firstCardInfo);
         transferPage.makeTransfer(String.valueOf(amount), secondCardInfo);
+        Thread.sleep(5000);
         transferPage.error("Ошибка");
     }
 
